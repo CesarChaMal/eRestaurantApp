@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "complete": {
+      "home": {
+        "title": "Completes",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Complete erstellen",
+        "createOrEditLabel": "Complete erstellen oder bearbeiten",
+        "search": "Suche nach Complete",
+        "notFound": "Keine Completes gefunden"
+      },
+      "created": "Complete erstellt mit ID {{ param }}",
+      "updated": "Complete aktualisiert mit ID {{ param }}",
+      "deleted": "Complete gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Complete {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Complete"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

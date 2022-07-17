@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "permission": {
+      "home": {
+        "title": "Permissions",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Permission",
+        "createOrEditLabel": "Créer ou éditer un Permission",
+        "search": "Recherche pour Permission",
+        "notFound": "Aucun Permission trouvé"
+      },
+      "created": "Un nouveau Permission a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Permission avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Permission avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Permission {{ id }} ?"
+      },
+      "detail": {
+        "title": "Permission"
+      },
+      "id": "Id",
+      "description": "Description",
+      "roles": "Roles"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "refunded": {
+      "home": {
+        "title": "Refundeds",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Refunded erstellen",
+        "createOrEditLabel": "Refunded erstellen oder bearbeiten",
+        "search": "Suche nach Refunded",
+        "notFound": "Keine Refundeds gefunden"
+      },
+      "created": "Refunded erstellt mit ID {{ param }}",
+      "updated": "Refunded aktualisiert mit ID {{ param }}",
+      "deleted": "Refunded gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Refunded {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Refunded"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "applications": ["eRestaurantApp"],
+  "changelogDate": "20220713035321",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "payment",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Payment",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "cart",
+      "otherEntityRelationshipName": "payments",
+      "relationshipName": "cart",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

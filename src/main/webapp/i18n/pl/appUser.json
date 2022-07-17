@@ -1,0 +1,30 @@
+{
+  "eRestaurantApp": {
+    "appUser": {
+      "home": {
+        "title": "App User",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj App User",
+        "createOrEditLabel": "Dodaj lub edytuj: App User",
+        "search": "Szukaj App User",
+        "notFound": "No App Users found"
+      },
+      "created": "Utworzono nowy obiekt typu App User z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu App User z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu App User z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć App User {{ id }}?"
+      },
+      "detail": {
+        "title": "App User"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "internalUser": "Internal User",
+      "roles": "Roles"
+    }
+  }
+}

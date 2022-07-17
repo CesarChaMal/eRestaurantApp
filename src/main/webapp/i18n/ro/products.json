@@ -1,0 +1,32 @@
+{
+  "eRestaurantApp": {
+    "products": {
+      "home": {
+        "title": "Products",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Products",
+        "createOrEditLabel": "Creeare sau editare Products",
+        "search": "Căutare după Products",
+        "notFound": "No Products found"
+      },
+      "created": "A fost creată o nouă entitate Products cu identificatorul {{ param }}",
+      "updated": "Products cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Products cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Products {{ id }}?"
+      },
+      "detail": {
+        "title": "Products"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "estimatedPreparaingTime": "Estimated Preparaing Time",
+      "category": "Category",
+      "discounts": "Discounts",
+      "restaurant": "Restaurant",
+      "cart": "Cart"
+    }
+  }
+}

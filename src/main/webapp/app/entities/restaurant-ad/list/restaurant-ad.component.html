@@ -1,0 +1,110 @@
+<div>
+  <h2 id="page-heading" data-cy="RestaurantAdHeading">
+    <span jhiTranslate="eRestaurantApp.restaurantAd.home.title">Restaurant Ads</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="eRestaurantApp.restaurantAd.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-restaurant-ad"
+        [routerLink]="['/restaurant-ad/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="eRestaurantApp.restaurantAd.home.createLabel"> Create a new Restaurant Ad </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="eRestaurantApp.restaurantAd.home.search">Query</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'eRestaurantApp.restaurantAd.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        <button class="btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+          <fa-icon icon="trash-alt"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="restaurantAds?.length === 0">
+    <span jhiTranslate="eRestaurantApp.restaurantAd.home.notFound">No restaurantAds found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="restaurantAds && restaurantAds.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.restaurantAd.id">Id</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.restaurantAd.url">Url</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.restaurantAd.description">Description</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.restaurantAd.restaurant">Restaurant</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let restaurantAd of restaurantAds; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/restaurant-ad', restaurantAd.id, 'view']">{{ restaurantAd.id }}</a>
+          </td>
+          <td>{{ restaurantAd.url }}</td>
+          <td>{{ restaurantAd.description }}</td>
+          <td>
+            <div *ngIf="restaurantAd.restaurant">
+              <a [routerLink]="['/restaurant', restaurantAd.restaurant?.id, 'view']">{{ restaurantAd.restaurant?.id }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/restaurant-ad', restaurantAd.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/restaurant-ad', restaurantAd.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(restaurantAd)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

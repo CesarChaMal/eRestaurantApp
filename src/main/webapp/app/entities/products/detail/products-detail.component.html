@@ -1,0 +1,67 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="products">
+      <h2 data-cy="productsDetailsHeading"><span jhiTranslate="eRestaurantApp.products.detail.title">Products</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.products.id">Id</span></dt>
+        <dd>
+          <span>{{ products.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.products.name">Name</span></dt>
+        <dd>
+          <span>{{ products.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.products.description">Description</span></dt>
+        <dd>
+          <span>{{ products.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.products.image">Image</span></dt>
+        <dd>
+          <div *ngIf="products.image">
+            <a (click)="openFile(products.image, products.imageContentType)">
+              <img [src]="'data:' + products.imageContentType + ';base64,' + products.image" style="max-width: 100%" alt="products image" />
+            </a>
+            {{ products.imageContentType }}, {{ byteSize(products.image) }}
+          </div>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.products.estimatedPreparaingTime">Estimated Preparaing Time</span></dt>
+        <dd>
+          <span>{{ products.estimatedPreparaingTime }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.products.category">Category</span></dt>
+        <dd>
+          <div *ngIf="products.category">
+            <a [routerLink]="['/categories', products.category?.id, 'view']">{{ products.category?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.products.restaurant">Restaurant</span></dt>
+        <dd>
+          <div *ngIf="products.restaurant">
+            <a [routerLink]="['/restaurant', products.restaurant?.id, 'view']">{{ products.restaurant?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.products.cart">Cart</span></dt>
+        <dd>
+          <div *ngIf="products.cart">
+            <a [routerLink]="['/cart', products.cart?.id, 'view']">{{ products.cart?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/products', products.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "employee": {
+      "home": {
+        "title": "Employees",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Employee",
+        "createOrEditLabel": "Genera o modifica un Employee",
+        "search": "Cerca Employee",
+        "notFound": "No Employees found"
+      },
+      "created": "&Egrave; stato generato un nuovo Employee con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Employee identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Employee con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Employee {{ id }}?"
+      },
+      "detail": {
+        "title": "Employee"
+      },
+      "id": "Id",
+      "description": "Description",
+      "restaurant": "Restaurant"
+    }
+  }
+}

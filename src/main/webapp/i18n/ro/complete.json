@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "complete": {
+      "home": {
+        "title": "Completes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Complete",
+        "createOrEditLabel": "Creeare sau editare Complete",
+        "search": "Căutare după Complete",
+        "notFound": "No Completes found"
+      },
+      "created": "A fost creată o nouă entitate Complete cu identificatorul {{ param }}",
+      "updated": "Complete cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Complete cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Complete {{ id }}?"
+      },
+      "detail": {
+        "title": "Complete"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

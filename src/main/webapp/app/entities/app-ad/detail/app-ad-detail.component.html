@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="appAd">
+      <h2 data-cy="appAdDetailsHeading"><span jhiTranslate="eRestaurantApp.appAd.detail.title">App Ad</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.appAd.id">Id</span></dt>
+        <dd>
+          <span>{{ appAd.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appAd.url">Url</span></dt>
+        <dd>
+          <span>{{ appAd.url }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appAd.description">Description</span></dt>
+        <dd>
+          <span>{{ appAd.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appAd.admin">Admin</span></dt>
+        <dd>
+          <div *ngIf="appAd.admin">
+            <a [routerLink]="['/admin', appAd.admin?.id, 'view']">{{ appAd.admin?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/app-ad', appAd.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

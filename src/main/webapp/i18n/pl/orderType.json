@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "orderType": {
+      "home": {
+        "title": "Order Type",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Order Type",
+        "createOrEditLabel": "Dodaj lub edytuj: Order Type",
+        "search": "Szukaj Order Type",
+        "notFound": "No Order Types found"
+      },
+      "created": "Utworzono nowy obiekt typu Order Type z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Order Type z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Order Type z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Order Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Type"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

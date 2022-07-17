@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "discount": {
+      "home": {
+        "title": "Discount",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Discount",
+        "createOrEditLabel": "Dodaj lub edytuj: Discount",
+        "search": "Szukaj Discount",
+        "notFound": "No Discounts found"
+      },
+      "created": "Utworzono nowy obiekt typu Discount z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Discount z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Discount z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Discount {{ id }}?"
+      },
+      "detail": {
+        "title": "Discount"
+      },
+      "id": "Id",
+      "code": "Code",
+      "description": "Description",
+      "percentage": "Percentage"
+    }
+  }
+}

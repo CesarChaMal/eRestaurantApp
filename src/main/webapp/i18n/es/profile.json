@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "profile": {
+      "home": {
+        "title": "Profiles",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Profile",
+        "createOrEditLabel": "Crear o editar Profile",
+        "search": "Buscar Profile",
+        "notFound": "Ningún Profiles encontrado"
+      },
+      "created": "Un nuevo Profile ha sido creado con el identificador {{ param }}",
+      "updated": "Un Profile ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Profile ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Profile {{ id }}?"
+      },
+      "detail": {
+        "title": "Profile"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

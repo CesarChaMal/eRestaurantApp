@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "categories": {
+      "home": {
+        "title": "Categories",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Categories",
+        "createOrEditLabel": "Create or edit a Categories",
+        "search": "Search for Categories",
+        "notFound": "No Categories found"
+      },
+      "created": "A new Categories is created with identifier {{ param }}",
+      "updated": "A Categories is updated with identifier {{ param }}",
+      "deleted": "A Categories is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Categories {{ id }}?"
+      },
+      "detail": {
+        "title": "Categories"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

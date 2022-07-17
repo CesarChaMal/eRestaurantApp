@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "payment": {
+      "home": {
+        "title": "Payment",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Payment",
+        "createOrEditLabel": "Dodaj lub edytuj: Payment",
+        "search": "Szukaj Payment",
+        "notFound": "No Payments found"
+      },
+      "created": "Utworzono nowy obiekt typu Payment z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Payment z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Payment z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Payment {{ id }}?"
+      },
+      "detail": {
+        "title": "Payment"
+      },
+      "id": "Id",
+      "description": "Description",
+      "cart": "Cart"
+    }
+  }
+}

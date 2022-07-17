@@ -1,0 +1,72 @@
+{
+  "applications": ["eRestaurantApp"],
+  "changelogDate": "20220713034221",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "restaurant",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Restaurant",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "restaurant",
+      "relationshipName": "products",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "restaurantAd",
+      "otherEntityRelationshipName": "restaurant",
+      "relationshipName": "ads",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "employee",
+      "otherEntityRelationshipName": "restaurant",
+      "relationshipName": "employees",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "notification",
+      "otherEntityRelationshipName": "restaurant",
+      "relationshipName": "notifications",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "simplePermission": {
+      "home": {
+        "title": "Simple Permissions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Simple Permission",
+        "createOrEditLabel": "Create or edit a Simple Permission",
+        "search": "Search for Simple Permission",
+        "notFound": "No Simple Permissions found"
+      },
+      "created": "A new Simple Permission is created with identifier {{ param }}",
+      "updated": "A Simple Permission is updated with identifier {{ param }}",
+      "deleted": "A Simple Permission is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Simple Permission {{ id }}?"
+      },
+      "detail": {
+        "title": "Simple Permission"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

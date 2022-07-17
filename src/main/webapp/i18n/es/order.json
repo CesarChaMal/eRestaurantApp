@@ -1,0 +1,29 @@
+{
+  "eRestaurantApp": {
+    "order": {
+      "home": {
+        "title": "Orders",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Order",
+        "createOrEditLabel": "Crear o editar Order",
+        "search": "Buscar Order",
+        "notFound": "Ningún Orders encontrado"
+      },
+      "created": "Un nuevo Order ha sido creado con el identificador {{ param }}",
+      "updated": "Un Order ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Order ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Order {{ id }}?"
+      },
+      "detail": {
+        "title": "Order"
+      },
+      "id": "Id",
+      "description": "Description",
+      "rating": "Rating",
+      "type": "Type",
+      "state": "State",
+      "customer": "Customer"
+    }
+  }
+}

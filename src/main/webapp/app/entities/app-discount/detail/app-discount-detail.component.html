@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="appDiscount">
+      <h2 data-cy="appDiscountDetailsHeading"><span jhiTranslate="eRestaurantApp.appDiscount.detail.title">App Discount</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.appDiscount.id">Id</span></dt>
+        <dd>
+          <span>{{ appDiscount.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appDiscount.code">Code</span></dt>
+        <dd>
+          <span>{{ appDiscount.code }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appDiscount.description">Description</span></dt>
+        <dd>
+          <span>{{ appDiscount.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appDiscount.percentage">Percentage</span></dt>
+        <dd>
+          <span>{{ appDiscount.percentage }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appDiscount.cart">Cart</span></dt>
+        <dd>
+          <div *ngIf="appDiscount.cart">
+            <a [routerLink]="['/cart', appDiscount.cart?.id, 'view']">{{ appDiscount.cart?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/app-discount', appDiscount.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

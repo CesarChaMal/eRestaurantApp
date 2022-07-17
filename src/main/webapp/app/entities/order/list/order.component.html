@@ -1,0 +1,112 @@
+<div>
+  <h2 id="page-heading" data-cy="OrderHeading">
+    <span jhiTranslate="eRestaurantApp.order.home.title">Orders</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="eRestaurantApp.order.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-order"
+        [routerLink]="['/order/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="eRestaurantApp.order.home.createLabel"> Create a new Order </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="eRestaurantApp.order.home.search">Query</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'eRestaurantApp.order.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        <button class="btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+          <fa-icon icon="trash-alt"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="orders?.length === 0">
+    <span jhiTranslate="eRestaurantApp.order.home.notFound">No orders found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="orders && orders.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.order.id">Id</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.order.description">Description</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.order.rating">Rating</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.order.type">Type</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.order.state">State</span></th>
+          <th scope="col"><span jhiTranslate="eRestaurantApp.order.customer">Customer</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/order', order.id, 'view']">{{ order.id }}</a>
+          </td>
+          <td>{{ order.description }}</td>
+          <td>{{ order.rating }}</td>
+          <td>
+            <div *ngIf="order.type">
+              <a [routerLink]="['/order-type', order.type?.id, 'view']">{{ order.type?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="order.state">
+              <a [routerLink]="['/state', order.state?.id, 'view']">{{ order.state?.id }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="order.customer">
+              <a [routerLink]="['/customer', order.customer?.id, 'view']">{{ order.customer?.id }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/order', order.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/order', order.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(order)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "restaurantAd": {
+      "home": {
+        "title": "Restaurant Ads",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Restaurant Ad",
+        "createOrEditLabel": "Creeare sau editare Restaurant Ad",
+        "search": "Căutare după Restaurant Ad",
+        "notFound": "No Restaurant Ads found"
+      },
+      "created": "A fost creată o nouă entitate Restaurant Ad cu identificatorul {{ param }}",
+      "updated": "Restaurant Ad cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Restaurant Ad cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Restaurant Ad {{ id }}?"
+      },
+      "detail": {
+        "title": "Restaurant Ad"
+      },
+      "id": "Id",
+      "url": "Url",
+      "description": "Description",
+      "restaurant": "Restaurant"
+    }
+  }
+}

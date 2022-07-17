@@ -1,0 +1,100 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-notification-heading"
+        data-cy="NotificationCreateUpdateHeading"
+        jhiTranslate="eRestaurantApp.notification.home.createOrEditLabel"
+      >
+        Create or edit a Notification
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="eRestaurantApp.notification.id" for="field_id">Id</label>
+          <input
+            type="text"
+            class="form-control"
+            name="id"
+            id="field_id"
+            data-cy="id"
+            formControlName="id"
+            [readonly]="editForm.get('id')!.value != null"
+          />
+          <div *ngIf="editForm.get('id')!.invalid && (editForm.get('id')!.dirty || editForm.get('id')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('id')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('id')?.errors?.minlength"
+              jhiTranslate="entity.validation.minlength"
+              [translateValues]="{ min: 5 }"
+            >
+              This field is required to be at least 5 characters.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="eRestaurantApp.notification.description" for="field_description">Description</label>
+          <textarea
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          ></textarea>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="eRestaurantApp.notification.type" for="field_type">Type</label>
+          <select class="form-control" id="field_type" data-cy="type" name="type" formControlName="type">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                notificationTypeOption.id === editForm.get('type')!.value?.id ? editForm.get('type')!.value : notificationTypeOption
+              "
+              *ngFor="let notificationTypeOption of typesCollection; trackBy: trackNotificationTypeById"
+            >
+              {{ notificationTypeOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="eRestaurantApp.notification.restaurant" for="field_restaurant">Restaurant</label>
+          <select class="form-control" id="field_restaurant" data-cy="restaurant" name="restaurant" formControlName="restaurant">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                restaurantOption.id === editForm.get('restaurant')!.value?.id ? editForm.get('restaurant')!.value : restaurantOption
+              "
+              *ngFor="let restaurantOption of restaurantsSharedCollection; trackBy: trackRestaurantById"
+            >
+              {{ restaurantOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

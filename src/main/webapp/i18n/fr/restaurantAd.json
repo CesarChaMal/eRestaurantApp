@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "restaurantAd": {
+      "home": {
+        "title": "RestaurantAds",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Restaurant Ad",
+        "createOrEditLabel": "Créer ou éditer un Restaurant Ad",
+        "search": "Recherche pour Restaurant Ad",
+        "notFound": "Aucun Restaurant Ad trouvé"
+      },
+      "created": "Un nouveau Restaurant Ad a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Restaurant Ad avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Restaurant Ad avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Restaurant Ad {{ id }} ?"
+      },
+      "detail": {
+        "title": "Restaurant Ad"
+      },
+      "id": "Id",
+      "url": "Url",
+      "description": "Description",
+      "restaurant": "Restaurant"
+    }
+  }
+}

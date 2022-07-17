@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "close": {
+      "home": {
+        "title": "Closes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Close",
+        "createOrEditLabel": "Creeare sau editare Close",
+        "search": "Căutare după Close",
+        "notFound": "No Closes found"
+      },
+      "created": "A fost creată o nouă entitate Close cu identificatorul {{ param }}",
+      "updated": "Close cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Close cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Close {{ id }}?"
+      },
+      "detail": {
+        "title": "Close"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

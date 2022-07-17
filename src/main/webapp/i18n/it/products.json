@@ -1,0 +1,32 @@
+{
+  "eRestaurantApp": {
+    "products": {
+      "home": {
+        "title": "Products",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Products",
+        "createOrEditLabel": "Genera o modifica un Products",
+        "search": "Cerca Products",
+        "notFound": "No Products found"
+      },
+      "created": "&Egrave; stato generato un nuovo Products con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Products identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Products con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Products {{ id }}?"
+      },
+      "detail": {
+        "title": "Products"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "estimatedPreparaingTime": "Estimated Preparaing Time",
+      "category": "Category",
+      "discounts": "Discounts",
+      "restaurant": "Restaurant",
+      "cart": "Cart"
+    }
+  }
+}

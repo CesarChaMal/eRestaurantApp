@@ -1,0 +1,42 @@
+{
+  "applications": ["eRestaurantApp"],
+  "changelogDate": "20220713040121",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "role",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Role",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "permission",
+      "otherEntityRelationshipName": "roles",
+      "ownerSide": true,
+      "relationshipName": "permissions",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "appUser",
+      "otherEntityRelationshipName": "roles",
+      "ownerSide": false,
+      "relationshipName": "users",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

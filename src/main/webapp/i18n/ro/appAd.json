@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "appAd": {
+      "home": {
+        "title": "App Ads",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate App Ad",
+        "createOrEditLabel": "Creeare sau editare App Ad",
+        "search": "Căutare după App Ad",
+        "notFound": "No App Ads found"
+      },
+      "created": "A fost creată o nouă entitate App Ad cu identificatorul {{ param }}",
+      "updated": "App Ad cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "App Ad cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți App Ad {{ id }}?"
+      },
+      "detail": {
+        "title": "App Ad"
+      },
+      "id": "Id",
+      "url": "Url",
+      "description": "Description",
+      "admin": "Admin"
+    }
+  }
+}

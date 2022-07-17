@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "role": {
+      "home": {
+        "title": "Roles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Role",
+        "createOrEditLabel": "Creeare sau editare Role",
+        "search": "Căutare după Role",
+        "notFound": "No Roles found"
+      },
+      "created": "A fost creată o nouă entitate Role cu identificatorul {{ param }}",
+      "updated": "Role cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Role cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Role {{ id }}?"
+      },
+      "detail": {
+        "title": "Role"
+      },
+      "id": "Id",
+      "description": "Description",
+      "permissions": "Permissions",
+      "users": "Users"
+    }
+  }
+}

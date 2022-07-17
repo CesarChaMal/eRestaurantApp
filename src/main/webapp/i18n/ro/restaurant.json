@@ -1,0 +1,33 @@
+{
+  "eRestaurantApp": {
+    "restaurant": {
+      "home": {
+        "title": "Restaurants",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Restaurant",
+        "createOrEditLabel": "Creeare sau editare Restaurant",
+        "search": "Căutare după Restaurant",
+        "notFound": "No Restaurants found"
+      },
+      "created": "A fost creată o nouă entitate Restaurant cu identificatorul {{ param }}",
+      "updated": "Restaurant cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Restaurant cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Restaurant {{ id }}?"
+      },
+      "detail": {
+        "title": "Restaurant"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "rating": "Rating",
+      "products": "Products",
+      "ads": "Ads",
+      "employees": "Employees",
+      "notifications": "Notifications"
+    }
+  }
+}

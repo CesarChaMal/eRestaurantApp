@@ -1,0 +1,31 @@
+{
+  "eRestaurantApp": {
+    "customer": {
+      "home": {
+        "title": "Customer",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Customer",
+        "createOrEditLabel": "Dodaj lub edytuj: Customer",
+        "search": "Szukaj Customer",
+        "notFound": "No Customers found"
+      },
+      "created": "Utworzono nowy obiekt typu Customer z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Customer z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Customer z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Customer {{ id }}?"
+      },
+      "detail": {
+        "title": "Customer"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "age": "Age",
+      "profile": "Profile",
+      "orders": "Orders"
+    }
+  }
+}

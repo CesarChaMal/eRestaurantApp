@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "permissionComposite": {
+      "home": {
+        "title": "Permission Composites",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Permission Composite",
+        "createOrEditLabel": "Creeare sau editare Permission Composite",
+        "search": "Căutare după Permission Composite",
+        "notFound": "No Permission Composites found"
+      },
+      "created": "A fost creată o nouă entitate Permission Composite cu identificatorul {{ param }}",
+      "updated": "Permission Composite cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Permission Composite cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Permission Composite {{ id }}?"
+      },
+      "detail": {
+        "title": "Permission Composite"
+      },
+      "id": "Id",
+      "description": "Description",
+      "permission": "Permission"
+    }
+  }
+}

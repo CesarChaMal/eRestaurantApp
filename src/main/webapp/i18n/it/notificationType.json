@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "notificationType": {
+      "home": {
+        "title": "NotificationTypes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Notification Type",
+        "createOrEditLabel": "Genera o modifica un Notification Type",
+        "search": "Cerca Notification Type",
+        "notFound": "No Notification Types found"
+      },
+      "created": "&Egrave; stato generato un nuovo Notification Type con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Notification Type identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Notification Type con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Notification Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Notification Type"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

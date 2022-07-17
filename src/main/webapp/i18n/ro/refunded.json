@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "refunded": {
+      "home": {
+        "title": "Refundeds",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Refunded",
+        "createOrEditLabel": "Creeare sau editare Refunded",
+        "search": "Căutare după Refunded",
+        "notFound": "No Refundeds found"
+      },
+      "created": "A fost creată o nouă entitate Refunded cu identificatorul {{ param }}",
+      "updated": "Refunded cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Refunded cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Refunded {{ id }}?"
+      },
+      "detail": {
+        "title": "Refunded"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

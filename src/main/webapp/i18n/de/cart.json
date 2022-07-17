@@ -1,0 +1,29 @@
+{
+  "eRestaurantApp": {
+    "cart": {
+      "home": {
+        "title": "Carts",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Cart erstellen",
+        "createOrEditLabel": "Cart erstellen oder bearbeiten",
+        "search": "Suche nach Cart",
+        "notFound": "Keine Carts gefunden"
+      },
+      "created": "Cart erstellt mit ID {{ param }}",
+      "updated": "Cart aktualisiert mit ID {{ param }}",
+      "deleted": "Cart gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Cart {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Cart"
+      },
+      "id": "Id",
+      "description": "Description",
+      "order": "Order",
+      "products": "Products",
+      "discounts": "Discounts",
+      "payments": "Payments"
+    }
+  }
+}

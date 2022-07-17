@@ -1,0 +1,30 @@
+{
+  "eRestaurantApp": {
+    "appUser": {
+      "home": {
+        "title": "App Users",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate App User",
+        "createOrEditLabel": "Creeare sau editare App User",
+        "search": "Căutare după App User",
+        "notFound": "No App Users found"
+      },
+      "created": "A fost creată o nouă entitate App User cu identificatorul {{ param }}",
+      "updated": "App User cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "App User cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți App User {{ id }}?"
+      },
+      "detail": {
+        "title": "App User"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "internalUser": "Internal User",
+      "roles": "Roles"
+    }
+  }
+}

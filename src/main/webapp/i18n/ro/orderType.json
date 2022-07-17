@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "orderType": {
+      "home": {
+        "title": "Order Types",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Order Type",
+        "createOrEditLabel": "Creeare sau editare Order Type",
+        "search": "Căutare după Order Type",
+        "notFound": "No Order Types found"
+      },
+      "created": "A fost creată o nouă entitate Order Type cu identificatorul {{ param }}",
+      "updated": "Order Type cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Order Type cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Order Type {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Type"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

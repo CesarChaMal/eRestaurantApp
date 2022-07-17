@@ -1,0 +1,28 @@
+{
+  "eRestaurantApp": {
+    "appDiscount": {
+      "home": {
+        "title": "AppDiscounts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo App Discount",
+        "createOrEditLabel": "Genera o modifica un App Discount",
+        "search": "Cerca App Discount",
+        "notFound": "No App Discounts found"
+      },
+      "created": "&Egrave; stato generato un nuovo App Discount con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato App Discount identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato App Discount con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare App Discount {{ id }}?"
+      },
+      "detail": {
+        "title": "App Discount"
+      },
+      "id": "Id",
+      "code": "Code",
+      "description": "Description",
+      "percentage": "Percentage",
+      "cart": "Cart"
+    }
+  }
+}

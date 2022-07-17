@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "notification": {
+      "home": {
+        "title": "Notification",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Notification",
+        "createOrEditLabel": "Dodaj lub edytuj: Notification",
+        "search": "Szukaj Notification",
+        "notFound": "No Notifications found"
+      },
+      "created": "Utworzono nowy obiekt typu Notification z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Notification z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Notification z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Notification {{ id }}?"
+      },
+      "detail": {
+        "title": "Notification"
+      },
+      "id": "Id",
+      "description": "Description",
+      "type": "Type",
+      "restaurant": "Restaurant"
+    }
+  }
+}

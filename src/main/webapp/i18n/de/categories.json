@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "categories": {
+      "home": {
+        "title": "Categories",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Categories erstellen",
+        "createOrEditLabel": "Categories erstellen oder bearbeiten",
+        "search": "Suche nach Categories",
+        "notFound": "Keine Categories gefunden"
+      },
+      "created": "Categories erstellt mit ID {{ param }}",
+      "updated": "Categories aktualisiert mit ID {{ param }}",
+      "deleted": "Categories gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Categories {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Categories"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

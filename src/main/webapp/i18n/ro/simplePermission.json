@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "simplePermission": {
+      "home": {
+        "title": "Simple Permissions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Simple Permission",
+        "createOrEditLabel": "Creeare sau editare Simple Permission",
+        "search": "Căutare după Simple Permission",
+        "notFound": "No Simple Permissions found"
+      },
+      "created": "A fost creată o nouă entitate Simple Permission cu identificatorul {{ param }}",
+      "updated": "Simple Permission cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Simple Permission cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Simple Permission {{ id }}?"
+      },
+      "detail": {
+        "title": "Simple Permission"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

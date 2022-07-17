@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "newOrder": {
+      "home": {
+        "title": "New Orders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate New Order",
+        "createOrEditLabel": "Creeare sau editare New Order",
+        "search": "Căutare după New Order",
+        "notFound": "No New Orders found"
+      },
+      "created": "A fost creată o nouă entitate New Order cu identificatorul {{ param }}",
+      "updated": "New Order cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "New Order cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți New Order {{ id }}?"
+      },
+      "detail": {
+        "title": "New Order"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

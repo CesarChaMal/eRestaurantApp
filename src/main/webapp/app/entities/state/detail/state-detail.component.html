@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="state">
+      <h2 data-cy="stateDetailsHeading"><span jhiTranslate="eRestaurantApp.state.detail.title">State</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.state.id">Id</span></dt>
+        <dd>
+          <span>{{ state.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.state.description">Description</span></dt>
+        <dd>
+          <span>{{ state.description }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/state', state.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

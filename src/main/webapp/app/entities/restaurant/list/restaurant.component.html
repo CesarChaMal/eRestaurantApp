@@ -1,0 +1,150 @@
+<div>
+  <h2 id="page-heading" data-cy="RestaurantHeading">
+    <span jhiTranslate="eRestaurantApp.restaurant.home.title">Restaurants</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="eRestaurantApp.restaurant.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-restaurant"
+        [routerLink]="['/restaurant/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="eRestaurantApp.restaurant.home.createLabel"> Create a new Restaurant </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="eRestaurantApp.restaurant.home.search">Query</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'eRestaurantApp.restaurant.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        <button class="btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+          <fa-icon icon="trash-alt"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="restaurants?.length === 0">
+    <span jhiTranslate="eRestaurantApp.restaurant.home.notFound">No restaurants found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="restaurants && restaurants.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
+          <th scope="col" jhiSortBy="id">
+            <span jhiTranslate="eRestaurantApp.restaurant.id">Id</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="name">
+            <span jhiTranslate="eRestaurantApp.restaurant.name">Name</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="description">
+            <span jhiTranslate="eRestaurantApp.restaurant.description">Description</span>
+            <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="image">
+            <span jhiTranslate="eRestaurantApp.restaurant.image">Image</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="email">
+            <span jhiTranslate="eRestaurantApp.restaurant.email">Email</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="rating">
+            <span jhiTranslate="eRestaurantApp.restaurant.rating">Rating</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let restaurant of restaurants; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/restaurant', restaurant.id, 'view']">{{ restaurant.id }}</a>
+          </td>
+          <td>{{ restaurant.name }}</td>
+          <td>{{ restaurant.description }}</td>
+          <td>
+            <a *ngIf="restaurant.image" (click)="openFile(restaurant.image, restaurant.imageContentType)">
+              <img
+                [src]="'data:' + restaurant.imageContentType + ';base64,' + restaurant.image"
+                style="max-height: 30px"
+                alt="restaurant image"
+              />
+            </a>
+            <span *ngIf="restaurant.image">{{ restaurant.imageContentType }}, {{ byteSize(restaurant.image) }}</span>
+          </td>
+          <td>{{ restaurant.email }}</td>
+          <td>{{ restaurant.rating }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/restaurant', restaurant.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/restaurant', restaurant.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(restaurant)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="restaurants && restaurants.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

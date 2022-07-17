@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "complete": {
+      "home": {
+        "title": "Completes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Complete",
+        "createOrEditLabel": "Créer ou éditer un Complete",
+        "search": "Recherche pour Complete",
+        "notFound": "Aucun Complete trouvé"
+      },
+      "created": "Un nouveau Complete a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Complete avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Complete avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Complete {{ id }} ?"
+      },
+      "detail": {
+        "title": "Complete"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

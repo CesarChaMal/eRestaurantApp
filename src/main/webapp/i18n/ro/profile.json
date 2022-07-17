@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "profile": {
+      "home": {
+        "title": "Profiles",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Profile",
+        "createOrEditLabel": "Creeare sau editare Profile",
+        "search": "Căutare după Profile",
+        "notFound": "No Profiles found"
+      },
+      "created": "A fost creată o nouă entitate Profile cu identificatorul {{ param }}",
+      "updated": "Profile cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Profile cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Profile {{ id }}?"
+      },
+      "detail": {
+        "title": "Profile"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

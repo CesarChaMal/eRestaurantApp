@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "cancel": {
+      "home": {
+        "title": "Cancels",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cancel",
+        "createOrEditLabel": "Create or edit a Cancel",
+        "search": "Search for Cancel",
+        "notFound": "No Cancels found"
+      },
+      "created": "A new Cancel is created with identifier {{ param }}",
+      "updated": "A Cancel is updated with identifier {{ param }}",
+      "deleted": "A Cancel is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cancel {{ id }}?"
+      },
+      "detail": {
+        "title": "Cancel"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "ad": {
+      "home": {
+        "title": "Ad",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Ad",
+        "createOrEditLabel": "Dodaj lub edytuj: Ad",
+        "search": "Szukaj Ad",
+        "notFound": "No Ads found"
+      },
+      "created": "Utworzono nowy obiekt typu Ad z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Ad z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Ad z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Ad {{ id }}?"
+      },
+      "detail": {
+        "title": "Ad"
+      },
+      "id": "Id",
+      "url": "Url",
+      "description": "Description"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "applications": ["eRestaurantApp"],
+  "changelogDate": "20220713035121",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Order",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "orderType",
+      "otherEntityRelationshipName": "order",
+      "ownerSide": true,
+      "relationshipName": "type",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "state",
+      "otherEntityRelationshipName": "order",
+      "ownerSide": true,
+      "relationshipName": "state",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "orders",
+      "relationshipName": "customer",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

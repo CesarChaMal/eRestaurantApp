@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="customerProfile">
+      <h2 data-cy="customerProfileDetailsHeading">
+        <span jhiTranslate="eRestaurantApp.customerProfile.detail.title">Customer Profile</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.customerProfile.id">Id</span></dt>
+        <dd>
+          <span>{{ customerProfile.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.customerProfile.name">Name</span></dt>
+        <dd>
+          <span>{{ customerProfile.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.customerProfile.location">Location</span></dt>
+        <dd>
+          <span>{{ customerProfile.location }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.customerProfile.locationRange">Location Range</span></dt>
+        <dd>
+          <span>{{ customerProfile.locationRange }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.customerProfile.referals">Referals</span></dt>
+        <dd>
+          <span>{{ customerProfile.referals }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/customer-profile', customerProfile.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

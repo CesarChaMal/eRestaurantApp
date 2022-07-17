@@ -1,0 +1,28 @@
+{
+  "eRestaurantApp": {
+    "appDiscount": {
+      "home": {
+        "title": "App Discounts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate App Discount",
+        "createOrEditLabel": "Creeare sau editare App Discount",
+        "search": "Căutare după App Discount",
+        "notFound": "No App Discounts found"
+      },
+      "created": "A fost creată o nouă entitate App Discount cu identificatorul {{ param }}",
+      "updated": "App Discount cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "App Discount cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți App Discount {{ id }}?"
+      },
+      "detail": {
+        "title": "App Discount"
+      },
+      "id": "Id",
+      "code": "Code",
+      "description": "Description",
+      "percentage": "Percentage",
+      "cart": "Cart"
+    }
+  }
+}

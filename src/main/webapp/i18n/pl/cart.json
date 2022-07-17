@@ -1,0 +1,29 @@
+{
+  "eRestaurantApp": {
+    "cart": {
+      "home": {
+        "title": "Cart",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Cart",
+        "createOrEditLabel": "Dodaj lub edytuj: Cart",
+        "search": "Szukaj Cart",
+        "notFound": "No Carts found"
+      },
+      "created": "Utworzono nowy obiekt typu Cart z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Cart z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Cart z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Cart {{ id }}?"
+      },
+      "detail": {
+        "title": "Cart"
+      },
+      "id": "Id",
+      "description": "Description",
+      "order": "Order",
+      "products": "Products",
+      "discounts": "Discounts",
+      "payments": "Payments"
+    }
+  }
+}

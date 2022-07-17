@@ -1,0 +1,156 @@
+<div>
+  <h2 id="page-heading" data-cy="CustomerHeading">
+    <span jhiTranslate="eRestaurantApp.customer.home.title">Customers</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="eRestaurantApp.customer.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-customer"
+        [routerLink]="['/customer/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span class="hidden-sm-down" jhiTranslate="eRestaurantApp.customer.home.createLabel"> Create a new Customer </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <form name="searchForm" class="row row-cols-sm-auto align-items-center">
+    <div class="col-sm-12">
+      <div class="input-group w-100 mt-3">
+        <label class="visually-hidden" for="currentSearch" jhiTranslate="eRestaurantApp.customer.home.search">Query</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="currentSearch"
+          id="currentSearch"
+          name="currentSearch"
+          placeholder="{{ 'eRestaurantApp.customer.home.search' | translate }}"
+        />
+
+        <button class="btn btn-info" (click)="search(currentSearch)">
+          <fa-icon icon="search"></fa-icon>
+        </button>
+
+        <button class="btn btn-danger" (click)="search('')" *ngIf="currentSearch">
+          <fa-icon icon="trash-alt"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="customers?.length === 0">
+    <span jhiTranslate="eRestaurantApp.customer.home.notFound">No customers found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="customers && customers.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
+          <th scope="col" jhiSortBy="id">
+            <span jhiTranslate="eRestaurantApp.customer.id">Id</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="name">
+            <span jhiTranslate="eRestaurantApp.customer.name">Name</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="description">
+            <span jhiTranslate="eRestaurantApp.customer.description">Description</span>
+            <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="image">
+            <span jhiTranslate="eRestaurantApp.customer.image">Image</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="email">
+            <span jhiTranslate="eRestaurantApp.customer.email">Email</span> <fa-icon *ngIf="!currentSearch" icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="age"><span jhiTranslate="eRestaurantApp.customer.age">Age</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="profile.id">
+            <span jhiTranslate="eRestaurantApp.customer.profile">Profile</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/customer', customer.id, 'view']">{{ customer.id }}</a>
+          </td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.description }}</td>
+          <td>
+            <a *ngIf="customer.image" (click)="openFile(customer.image, customer.imageContentType)">
+              <img
+                [src]="'data:' + customer.imageContentType + ';base64,' + customer.image"
+                style="max-height: 30px"
+                alt="customer image"
+              />
+            </a>
+            <span *ngIf="customer.image">{{ customer.imageContentType }}, {{ byteSize(customer.image) }}</span>
+          </td>
+          <td>{{ customer.email }}</td>
+          <td>{{ customer.age }}</td>
+          <td>
+            <div *ngIf="customer.profile">
+              <a [routerLink]="['/customer-profile', customer.profile?.id, 'view']">{{ customer.profile?.id }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/customer', customer.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/customer', customer.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(customer)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="customers && customers.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="refunded">
+      <h2 data-cy="refundedDetailsHeading"><span jhiTranslate="eRestaurantApp.refunded.detail.title">Refunded</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.refunded.id">Id</span></dt>
+        <dd>
+          <span>{{ refunded.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.refunded.description">Description</span></dt>
+        <dd>
+          <span>{{ refunded.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.refunded.enabled">Enabled</span></dt>
+        <dd>
+          <span>{{ refunded.enabled }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/refunded', refunded.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

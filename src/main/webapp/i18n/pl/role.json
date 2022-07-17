@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "role": {
+      "home": {
+        "title": "Role",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Role",
+        "createOrEditLabel": "Dodaj lub edytuj: Role",
+        "search": "Szukaj Role",
+        "notFound": "No Roles found"
+      },
+      "created": "Utworzono nowy obiekt typu Role z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Role z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Role z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Role {{ id }}?"
+      },
+      "detail": {
+        "title": "Role"
+      },
+      "id": "Id",
+      "description": "Description",
+      "permissions": "Permissions",
+      "users": "Users"
+    }
+  }
+}

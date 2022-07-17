@@ -1,0 +1,53 @@
+{
+  "applications": ["eRestaurantApp"],
+  "changelogDate": "20220713035021",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "cart",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Cart",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "order",
+      "otherEntityRelationshipName": "cart",
+      "ownerSide": true,
+      "relationshipName": "order",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "products",
+      "otherEntityRelationshipName": "cart",
+      "relationshipName": "products",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "appDiscount",
+      "otherEntityRelationshipName": "cart",
+      "relationshipName": "discounts",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "payment",
+      "otherEntityRelationshipName": "cart",
+      "relationshipName": "payments",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

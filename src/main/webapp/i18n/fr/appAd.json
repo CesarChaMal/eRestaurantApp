@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "appAd": {
+      "home": {
+        "title": "AppAds",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau App Ad",
+        "createOrEditLabel": "Créer ou éditer un App Ad",
+        "search": "Recherche pour App Ad",
+        "notFound": "Aucun App Ad trouvé"
+      },
+      "created": "Un nouveau App Ad a été créé avec l'identifiant {{ param }}",
+      "updated": "Le App Ad avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le App Ad avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le App Ad {{ id }} ?"
+      },
+      "detail": {
+        "title": "App Ad"
+      },
+      "id": "Id",
+      "url": "Url",
+      "description": "Description",
+      "admin": "Admin"
+    }
+  }
+}

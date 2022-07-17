@@ -1,0 +1,29 @@
+{
+  "eRestaurantApp": {
+    "admin": {
+      "home": {
+        "title": "Admin",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Dodaj Admin",
+        "createOrEditLabel": "Dodaj lub edytuj: Admin",
+        "search": "Szukaj Admin",
+        "notFound": "No Admins found"
+      },
+      "created": "Utworzono nowy obiekt typu Admin z identyfikatorem {{ param }}",
+      "updated": "Uaktualniono obiekt typu Admin z identyfikatorem {{ param }}",
+      "deleted": "Usunięto obiekt typu Admin z identyfikatorem {{ param }}",
+      "delete": {
+        "question": "Czy na pewno chcesz usunąć Admin {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "ads": "Ads"
+    }
+  }
+}

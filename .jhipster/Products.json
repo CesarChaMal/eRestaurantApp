@@ -1,0 +1,69 @@
+{
+  "applications": ["eRestaurantApp"],
+  "changelogDate": "20220713034521",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "products",
+  "fields": [
+    {
+      "fieldName": "id",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "estimatedPreparaingTime",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Products",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "categories",
+      "otherEntityRelationshipName": "products",
+      "ownerSide": true,
+      "relationshipName": "category",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "restaurantDiscount",
+      "otherEntityRelationshipName": "products",
+      "relationshipName": "discounts",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "restaurant",
+      "otherEntityRelationshipName": "products",
+      "relationshipName": "restaurant",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "cart",
+      "otherEntityRelationshipName": "products",
+      "relationshipName": "cart",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

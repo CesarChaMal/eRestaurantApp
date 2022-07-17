@@ -1,0 +1,33 @@
+{
+  "eRestaurantApp": {
+    "restaurant": {
+      "home": {
+        "title": "Restaurants",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Restaurant",
+        "createOrEditLabel": "Créer ou éditer un Restaurant",
+        "search": "Recherche pour Restaurant",
+        "notFound": "Aucun Restaurant trouvé"
+      },
+      "created": "Un nouveau Restaurant a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Restaurant avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Restaurant avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Restaurant {{ id }} ?"
+      },
+      "detail": {
+        "title": "Restaurant"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "rating": "Rating",
+      "products": "Products",
+      "ads": "Ads",
+      "employees": "Employees",
+      "notifications": "Notifications"
+    }
+  }
+}

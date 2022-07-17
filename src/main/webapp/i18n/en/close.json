@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "close": {
+      "home": {
+        "title": "Closes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Close",
+        "createOrEditLabel": "Create or edit a Close",
+        "search": "Search for Close",
+        "notFound": "No Closes found"
+      },
+      "created": "A new Close is created with identifier {{ param }}",
+      "updated": "A Close is updated with identifier {{ param }}",
+      "deleted": "A Close is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Close {{ id }}?"
+      },
+      "detail": {
+        "title": "Close"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

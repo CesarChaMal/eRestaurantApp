@@ -1,0 +1,29 @@
+{
+  "eRestaurantApp": {
+    "admin": {
+      "home": {
+        "title": "Admins",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Admin",
+        "createOrEditLabel": "Crear o editar Admin",
+        "search": "Buscar Admin",
+        "notFound": "Ningún Admins encontrado"
+      },
+      "created": "Un nuevo Admin ha sido creado con el identificador {{ param }}",
+      "updated": "Un Admin ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Admin ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Admin {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "ads": "Ads"
+    }
+  }
+}

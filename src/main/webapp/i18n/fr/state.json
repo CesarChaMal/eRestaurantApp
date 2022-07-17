@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "state": {
+      "home": {
+        "title": "States",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau State",
+        "createOrEditLabel": "Créer ou éditer un State",
+        "search": "Recherche pour State",
+        "notFound": "Aucun State trouvé"
+      },
+      "created": "Un nouveau State a été créé avec l'identifiant {{ param }}",
+      "updated": "Le State avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le State avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le State {{ id }} ?"
+      },
+      "detail": {
+        "title": "State"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

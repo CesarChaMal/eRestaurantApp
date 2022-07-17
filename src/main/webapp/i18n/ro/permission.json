@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "permission": {
+      "home": {
+        "title": "Permissions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Permission",
+        "createOrEditLabel": "Creeare sau editare Permission",
+        "search": "Căutare după Permission",
+        "notFound": "No Permissions found"
+      },
+      "created": "A fost creată o nouă entitate Permission cu identificatorul {{ param }}",
+      "updated": "Permission cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Permission cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Permission {{ id }}?"
+      },
+      "detail": {
+        "title": "Permission"
+      },
+      "id": "Id",
+      "description": "Description",
+      "roles": "Roles"
+    }
+  }
+}

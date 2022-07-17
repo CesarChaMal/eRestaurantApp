@@ -1,0 +1,29 @@
+{
+  "eRestaurantApp": {
+    "admin": {
+      "home": {
+        "title": "Admins",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Admin",
+        "createOrEditLabel": "Creeare sau editare Admin",
+        "search": "Căutare după Admin",
+        "notFound": "No Admins found"
+      },
+      "created": "A fost creată o nouă entitate Admin cu identificatorul {{ param }}",
+      "updated": "Admin cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Admin cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Admin {{ id }}?"
+      },
+      "detail": {
+        "title": "Admin"
+      },
+      "id": "Id",
+      "name": "Name",
+      "description": "Description",
+      "image": "Image",
+      "email": "Email",
+      "ads": "Ads"
+    }
+  }
+}

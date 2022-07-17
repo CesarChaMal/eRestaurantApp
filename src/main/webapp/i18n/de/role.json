@@ -1,0 +1,27 @@
+{
+  "eRestaurantApp": {
+    "role": {
+      "home": {
+        "title": "Roles",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Role erstellen",
+        "createOrEditLabel": "Role erstellen oder bearbeiten",
+        "search": "Suche nach Role",
+        "notFound": "Keine Roles gefunden"
+      },
+      "created": "Role erstellt mit ID {{ param }}",
+      "updated": "Role aktualisiert mit ID {{ param }}",
+      "deleted": "Role gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Role {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Role"
+      },
+      "id": "Id",
+      "description": "Description",
+      "permissions": "Permissions",
+      "users": "Users"
+    }
+  }
+}

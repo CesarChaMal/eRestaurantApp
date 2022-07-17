@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="employee">
+      <h2 data-cy="employeeDetailsHeading"><span jhiTranslate="eRestaurantApp.employee.detail.title">Employee</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.employee.id">Id</span></dt>
+        <dd>
+          <span>{{ employee.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.employee.description">Description</span></dt>
+        <dd>
+          <span>{{ employee.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.employee.restaurant">Restaurant</span></dt>
+        <dd>
+          <div *ngIf="employee.restaurant">
+            <a [routerLink]="['/restaurant', employee.restaurant?.id, 'view']">{{ employee.restaurant?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/employee', employee.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

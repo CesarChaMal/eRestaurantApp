@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "onHold": {
+      "home": {
+        "title": "On Holds",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate On Hold",
+        "createOrEditLabel": "Creeare sau editare On Hold",
+        "search": "Căutare după On Hold",
+        "notFound": "No On Holds found"
+      },
+      "created": "A fost creată o nouă entitate On Hold cu identificatorul {{ param }}",
+      "updated": "On Hold cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "On Hold cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți On Hold {{ id }}?"
+      },
+      "detail": {
+        "title": "On Hold"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

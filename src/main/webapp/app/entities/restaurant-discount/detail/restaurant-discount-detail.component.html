@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="restaurantDiscount">
+      <h2 data-cy="restaurantDiscountDetailsHeading">
+        <span jhiTranslate="eRestaurantApp.restaurantDiscount.detail.title">Restaurant Discount</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.restaurantDiscount.id">Id</span></dt>
+        <dd>
+          <span>{{ restaurantDiscount.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurantDiscount.code">Code</span></dt>
+        <dd>
+          <span>{{ restaurantDiscount.code }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurantDiscount.description">Description</span></dt>
+        <dd>
+          <span>{{ restaurantDiscount.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurantDiscount.percentage">Percentage</span></dt>
+        <dd>
+          <span>{{ restaurantDiscount.percentage }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurantDiscount.products">Products</span></dt>
+        <dd>
+          <div *ngIf="restaurantDiscount.products">
+            <a [routerLink]="['/products', restaurantDiscount.products?.id, 'view']">{{ restaurantDiscount.products?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/restaurant-discount', restaurantDiscount.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

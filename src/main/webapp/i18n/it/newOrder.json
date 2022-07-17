@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "newOrder": {
+      "home": {
+        "title": "NewOrders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo New Order",
+        "createOrEditLabel": "Genera o modifica un New Order",
+        "search": "Cerca New Order",
+        "notFound": "No New Orders found"
+      },
+      "created": "&Egrave; stato generato un nuovo New Order con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato New Order identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato New Order con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare New Order {{ id }}?"
+      },
+      "detail": {
+        "title": "New Order"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

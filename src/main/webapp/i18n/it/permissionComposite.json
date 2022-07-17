@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "permissionComposite": {
+      "home": {
+        "title": "PermissionComposites",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Genera un nuovo Permission Composite",
+        "createOrEditLabel": "Genera o modifica un Permission Composite",
+        "search": "Cerca Permission Composite",
+        "notFound": "No Permission Composites found"
+      },
+      "created": "&Egrave; stato generato un nuovo Permission Composite con identificatore {{ param }}",
+      "updated": "&Egrave; stato aggiornato Permission Composite identificato da {{ param }}",
+      "deleted": "&Egrave; stato eliminato Permission Composite con identificatore {{ param }}",
+      "delete": {
+        "question": "Sei sicuro di volere eliminare Permission Composite {{ id }}?"
+      },
+      "detail": {
+        "title": "Permission Composite"
+      },
+      "id": "Id",
+      "description": "Description",
+      "permission": "Permission"
+    }
+  }
+}

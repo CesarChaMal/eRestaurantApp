@@ -1,0 +1,28 @@
+{
+  "eRestaurantApp": {
+    "customerProfile": {
+      "home": {
+        "title": "Customer Profiles",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Customer Profile erstellen",
+        "createOrEditLabel": "Customer Profile erstellen oder bearbeiten",
+        "search": "Suche nach Customer Profile",
+        "notFound": "Keine Customer Profiles gefunden"
+      },
+      "created": "Customer Profile erstellt mit ID {{ param }}",
+      "updated": "Customer Profile aktualisiert mit ID {{ param }}",
+      "deleted": "Customer Profile gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Customer Profile {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Customer Profile"
+      },
+      "id": "Id",
+      "name": "Name",
+      "location": "Location",
+      "locationRange": "Location Range",
+      "referals": "Referals"
+    }
+  }
+}

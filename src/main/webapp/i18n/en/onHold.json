@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "onHold": {
+      "home": {
+        "title": "On Holds",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new On Hold",
+        "createOrEditLabel": "Create or edit a On Hold",
+        "search": "Search for On Hold",
+        "notFound": "No On Holds found"
+      },
+      "created": "A new On Hold is created with identifier {{ param }}",
+      "updated": "A On Hold is updated with identifier {{ param }}",
+      "deleted": "A On Hold is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete On Hold {{ id }}?"
+      },
+      "detail": {
+        "title": "On Hold"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

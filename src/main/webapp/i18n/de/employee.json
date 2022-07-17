@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "employee": {
+      "home": {
+        "title": "Employees",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Employee erstellen",
+        "createOrEditLabel": "Employee erstellen oder bearbeiten",
+        "search": "Suche nach Employee",
+        "notFound": "Keine Employees gefunden"
+      },
+      "created": "Employee erstellt mit ID {{ param }}",
+      "updated": "Employee aktualisiert mit ID {{ param }}",
+      "deleted": "Employee gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Employee {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Employee"
+      },
+      "id": "Id",
+      "description": "Description",
+      "restaurant": "Restaurant"
+    }
+  }
+}

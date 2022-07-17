@@ -1,0 +1,25 @@
+{
+  "eRestaurantApp": {
+    "state": {
+      "home": {
+        "title": "States",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate State",
+        "createOrEditLabel": "Creeare sau editare State",
+        "search": "Căutare după State",
+        "notFound": "No States found"
+      },
+      "created": "A fost creată o nouă entitate State cu identificatorul {{ param }}",
+      "updated": "State cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "State cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți State {{ id }}?"
+      },
+      "detail": {
+        "title": "State"
+      },
+      "id": "Id",
+      "description": "Description"
+    }
+  }
+}

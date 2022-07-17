@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "payment": {
+      "home": {
+        "title": "Payments",
+        "refreshListLabel": "Liste aktualisieren",
+        "createLabel": "Payment erstellen",
+        "createOrEditLabel": "Payment erstellen oder bearbeiten",
+        "search": "Suche nach Payment",
+        "notFound": "Keine Payments gefunden"
+      },
+      "created": "Payment erstellt mit ID {{ param }}",
+      "updated": "Payment aktualisiert mit ID {{ param }}",
+      "deleted": "Payment gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Payment {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Payment"
+      },
+      "id": "Id",
+      "description": "Description",
+      "cart": "Cart"
+    }
+  }
+}

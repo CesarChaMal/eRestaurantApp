@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="appUser">
+      <h2 data-cy="appUserDetailsHeading"><span jhiTranslate="eRestaurantApp.appUser.detail.title">App User</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.appUser.id">Id</span></dt>
+        <dd>
+          <span>{{ appUser.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appUser.name">Name</span></dt>
+        <dd>
+          <span>{{ appUser.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appUser.description">Description</span></dt>
+        <dd>
+          <span>{{ appUser.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appUser.image">Image</span></dt>
+        <dd>
+          <div *ngIf="appUser.image">
+            <a (click)="openFile(appUser.image, appUser.imageContentType)">
+              <img [src]="'data:' + appUser.imageContentType + ';base64,' + appUser.image" style="max-width: 100%" alt="appUser image" />
+            </a>
+            {{ appUser.imageContentType }}, {{ byteSize(appUser.image) }}
+          </div>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appUser.email">Email</span></dt>
+        <dd>
+          <span>{{ appUser.email }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appUser.internalUser">Internal User</span></dt>
+        <dd>
+          <span>{{ appUser.internalUser?.login }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.appUser.roles">Roles</span></dt>
+        <dd>
+          <span *ngFor="let roles of appUser.roles; let last = last">
+            <a [routerLink]="['/role', roles?.id, 'view']">{{ roles.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/app-user', appUser.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

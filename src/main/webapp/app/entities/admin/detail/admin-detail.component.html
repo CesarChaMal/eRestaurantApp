@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="admin">
+      <h2 data-cy="adminDetailsHeading"><span jhiTranslate="eRestaurantApp.admin.detail.title">Admin</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.admin.id">Id</span></dt>
+        <dd>
+          <span>{{ admin.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.admin.name">Name</span></dt>
+        <dd>
+          <span>{{ admin.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.admin.description">Description</span></dt>
+        <dd>
+          <span>{{ admin.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.admin.image">Image</span></dt>
+        <dd>
+          <div *ngIf="admin.image">
+            <a (click)="openFile(admin.image, admin.imageContentType)">
+              <img [src]="'data:' + admin.imageContentType + ';base64,' + admin.image" style="max-width: 100%" alt="admin image" />
+            </a>
+            {{ admin.imageContentType }}, {{ byteSize(admin.image) }}
+          </div>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.admin.email">Email</span></dt>
+        <dd>
+          <span>{{ admin.email }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/admin', admin.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

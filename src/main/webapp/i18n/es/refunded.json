@@ -1,0 +1,26 @@
+{
+  "eRestaurantApp": {
+    "refunded": {
+      "home": {
+        "title": "Refundeds",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Refunded",
+        "createOrEditLabel": "Crear o editar Refunded",
+        "search": "Buscar Refunded",
+        "notFound": "Ningún Refundeds encontrado"
+      },
+      "created": "Un nuevo Refunded ha sido creado con el identificador {{ param }}",
+      "updated": "Un Refunded ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Refunded ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Refunded {{ id }}?"
+      },
+      "detail": {
+        "title": "Refunded"
+      },
+      "id": "Id",
+      "description": "Description",
+      "enabled": "Enabled"
+    }
+  }
+}

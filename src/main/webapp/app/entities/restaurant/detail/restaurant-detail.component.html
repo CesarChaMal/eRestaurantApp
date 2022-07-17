@@ -1,0 +1,57 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="restaurant">
+      <h2 data-cy="restaurantDetailsHeading"><span jhiTranslate="eRestaurantApp.restaurant.detail.title">Restaurant</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.restaurant.id">Id</span></dt>
+        <dd>
+          <span>{{ restaurant.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurant.name">Name</span></dt>
+        <dd>
+          <span>{{ restaurant.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurant.description">Description</span></dt>
+        <dd>
+          <span>{{ restaurant.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurant.image">Image</span></dt>
+        <dd>
+          <div *ngIf="restaurant.image">
+            <a (click)="openFile(restaurant.image, restaurant.imageContentType)">
+              <img
+                [src]="'data:' + restaurant.imageContentType + ';base64,' + restaurant.image"
+                style="max-width: 100%"
+                alt="restaurant image"
+              />
+            </a>
+            {{ restaurant.imageContentType }}, {{ byteSize(restaurant.image) }}
+          </div>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurant.email">Email</span></dt>
+        <dd>
+          <span>{{ restaurant.email }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.restaurant.rating">Rating</span></dt>
+        <dd>
+          <span>{{ restaurant.rating }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/restaurant', restaurant.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

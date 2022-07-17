@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="ad">
+      <h2 data-cy="adDetailsHeading"><span jhiTranslate="eRestaurantApp.ad.detail.title">Ad</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="eRestaurantApp.ad.id">Id</span></dt>
+        <dd>
+          <span>{{ ad.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.ad.url">Url</span></dt>
+        <dd>
+          <span>{{ ad.url }}</span>
+        </dd>
+        <dt><span jhiTranslate="eRestaurantApp.ad.description">Description</span></dt>
+        <dd>
+          <span>{{ ad.description }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/ad', ad.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
