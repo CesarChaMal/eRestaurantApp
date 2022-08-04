@@ -20,14 +20,6 @@ logging:
     org.hibernate.SQL: DEBUG
     com.erestaurant.erestaurantapp: DEBUG
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    enabled: false # By default, the JHipster Registry is not used in the "dev" profile
-    service-url:
-      defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
-
 management:
   health:
     elasticsearch:
@@ -43,14 +35,6 @@ spring:
   jackson:
     serialization:
       indent-output: true
-  cloud:
-    config:
-      uri: http://admin:${jhipster.registry.password}@localhost:8761/config
-      # name of the config server's property source (file.yml) that we want to use
-      name: eRestaurantApp
-      profile: dev
-      label: main # toggle to switch to a different version of the configuration as stored in git
-      # it can be set to any label, branch or commit of the configuration source Git repository
   h2:
     console:
       # disable spring boot built-in h2-console since we start it manually with correct configuration
@@ -95,8 +79,6 @@ server:
 # ===================================================================
 
 jhipster:
-  registry:
-    password: admin
   # CORS is only enabled by default with the "dev" profile
   cors:
     # Allow Ionic for JHipster by default (* no longer allowed in Spring Boot 2.4+)

@@ -13,13 +13,6 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
-eureka:
-  client:
-    enabled: false
-  instance:
-    appname: eRestaurantApp
-    instanceId: eRestaurantApp:${spring.application.instance-id:${random.value}}
-
 spring:
   profiles:
     # Uncomment the following line to enable tests against production database type rather than H2, using Testcontainers
@@ -27,8 +20,6 @@ spring:
   application:
     name: eRestaurantApp
   cloud:
-    config:
-      enabled: false
     stream:
       kafka:
         binder:

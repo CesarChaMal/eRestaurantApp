@@ -1,6 +1,6 @@
 {
   "applications": ["eRestaurantApp"],
-  "changelogDate": "20220713035621",
+  "changelogDate": "20220803065733",
   "dto": "mapstruct",
   "embedded": false,
   "entityTableName": "app_ad",

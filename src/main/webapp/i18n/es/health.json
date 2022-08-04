@@ -12,10 +12,6 @@
     },
     "indicator": {
       "binders": "Agente de mensajes",
-      "discoveryComposite": "Descubrimiento compuesto",
-      "refreshScope": "Alcance de actualización de microservicios",
-      "clientConfigServer": "Servidor de configuración de microservicio",
-      "hystrix": "Hystrix",
       "diskSpace": "Espacio en disco",
       "mail": "Correo Electrónico",
       "livenessState": "Liveness state",

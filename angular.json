@@ -100,7 +100,6 @@
   },
   "defaultProject": "e-restaurant-app",
   "cli": {
-    "analytics": false,
     "cache": {
       "enabled": true,
       "path": "./target/angular/",

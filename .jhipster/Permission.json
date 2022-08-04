@@ -1,6 +1,6 @@
 {
   "applications": ["eRestaurantApp"],
-  "changelogDate": "20220713040221",
+  "changelogDate": "20220803070333",
   "dto": "mapstruct",
   "embedded": false,
   "entityTableName": "permission",

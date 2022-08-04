@@ -12,12 +12,6 @@
     },
     "indicator": {
       "binders": "Message broker",
-      "discoveryComposite": "Discovery Composite",
-      "refreshScope": "Microservice Refresh Scope",
-      "clientConfigServer": "Microservice Config Server",
-      "hystrix": "Hystrix",
-
-      "reactiveDiscoveryClients": "Microservice Discovery Clients",
       "diskSpace": "Disk space",
       "mail": "Email",
       "livenessState": "Liveness state",

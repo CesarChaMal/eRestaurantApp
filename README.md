@@ -360,7 +360,6 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [jhipster homepage and latest documentation]: https://www.jhipster.tech
 [jhipster 7.8.1 archive]: https://www.jhipster.tech
 [using jhipster in development]: https://www.jhipster.tech/development/
-[service discovery and configuration with the jhipster-registry]: https://www.jhipster.tech/microservices-architecture/#jhipster-registry
 [using docker and docker-compose]: https://www.jhipster.tech/docker-compose
 [using jhipster in production]: https://www.jhipster.tech/production/
 [running tests page]: https://www.jhipster.tech/running-tests/

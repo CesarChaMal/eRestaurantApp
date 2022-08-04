@@ -12,10 +12,6 @@
     },
     "indicator": {
       "binders": "Broker wiadomości",
-      "discoveryComposite": "Discovery Composite",
-      "refreshScope": "Obszar aktualizacji mikroserwisów",
-      "clientConfigServer": "Serwer konfiguracyjny mikroserwisów",
-      "hystrix": "Hystrix",
       "diskSpace": "Przestrzeń dyskowa",
       "mail": "Email",
       "livenessState": "Liveness state",
